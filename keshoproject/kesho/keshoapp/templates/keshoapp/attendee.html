@@ -1,0 +1,36 @@
+{% extends 'keshoapp/base.html' %} <!-- we are inheriting from another file  -->
+{% load crispy_forms_tags %}
+{% load static %}
+
+<body>
+
+{% block content %}
+
+    <div class="container">
+    <form action="" method="POST">
+        <h1>
+            ADD ATTENDEES FORM
+        </h1>
+        <br>
+        {% csrf_token %}
+        {{ getattendeeform | crispy }}
+        <input type = "submit">
+    </form>
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

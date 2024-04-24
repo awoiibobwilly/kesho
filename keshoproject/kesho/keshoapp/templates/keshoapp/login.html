@@ -1,0 +1,23 @@
+{% extends 'keshoapp/base.html' %} 
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+
+<div class="container container-fluid">
+
+<form method="POST" id ="form" class ="loginform" style="border-radius: 25px; border: 2px solid #194dfc; padding: 20px; width: 400px; height: 350px;">
+
+{% csrf_token %}
+{{form | crispy}}
+<br>
+<br>
+<input type = "submit" name="submit">
+</form>
+</div>
+
+{% endblock %}
